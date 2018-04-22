@@ -14,8 +14,6 @@ namespace Vueling.Redis.Dao
 {
     public class StudentDao
     {
-        private readonly string host = "192.168.99.100:6390";
-
         StackExchangeRedisCacheClient cacheClient;
         NewtonsoftSerializer serializer;
 

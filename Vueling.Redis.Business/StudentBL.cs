@@ -9,7 +9,7 @@ namespace Vueling.Redis.Business
 {
     public class StudentBL
     {
-        StudentDao stDao;
+        private readonly StudentDao stDao;
 
         public StudentBL()
         {
