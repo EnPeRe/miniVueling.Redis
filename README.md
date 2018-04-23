@@ -12,7 +12,7 @@ Utilitzem :
 
         NewtonsoftSerializer serializer = new NewtonsoftSerializer();
         RedisCachingSectionHandler redisConfiguration = RedisCachingSectionHandler.GetConfig();
-	      StackExchangeRedisCacheClient cacheClient = new StackExchangeRedisCacheClient(serializer, redisConfiguration);
+	StackExchangeRedisCacheClient cacheClient = new StackExchangeRedisCacheClient(serializer, redisConfiguration);
 
 per declarar
 el serialitzador de json per poder guardar objectes en format json,
@@ -29,6 +29,7 @@ per guardar o llegir de la db per defecte db_01. Notem que podem utilitzar GetAs
 
 Important, cal afegir a l'app.config 
 
+```
   <configSections>
     <section name="redisCacheClient" type="StackExchange.Redis.Extensions.LegacyConfiguration.RedisCachingSectionHandler, StackExchange.Redis.Extensions.LegacyConfiguration" />
   </configSections>
@@ -38,6 +39,6 @@ Important, cal afegir a l'app.config
       <add host="192.168.99.100" cachePort="6379"/>
     </hosts>
   </redisCacheClient>
-
+```
 El configSections sempre com a primer bloc dins de la configuració.
 Cambiem el host i el port (i més) tal i com els necessitèssim.
