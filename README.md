@@ -21,8 +21,8 @@ el clientCache del redis (amb el serialitzador i la configuració).
 
 i després utilitzem 
 
-cacheClient.Add<T>(nom_db, T value) o 
-cacheClient.Get<T>(nom_db(= key)) 
+cacheClient.Add<T>(nom_taula, T value) o 
+cacheClient.Get<T>(nom_taula(= key)) 
 
 per guardar o llegir de la db per defecte db_01. Notem que podem utilitzar GetAsync o AddAsync per a guardar i llegir de forma asincrona.
 
